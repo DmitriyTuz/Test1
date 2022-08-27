@@ -11,7 +11,7 @@ class ArtController {
 
     async createComment(req, res, next) {
         try {
-            const {id, userId, artId, name, content} = req.body
+            const {userId, artId, name, content} = req.body
 
             if (!artId) {
                 return next(ApiError.badRequest('Не задан параметр ArtId'))
